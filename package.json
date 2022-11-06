@@ -8,9 +8,14 @@
     "lint": "eslint . --ext .js,.ts,.tsx"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "axios": "^1.1.3",
     "next": "11.1.1-canary.7",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-query": "^3.39.2",
+    "recoil": "^0.7.6"
   },
   "devDependencies": {
     "@types/node": "^17.0.17",
