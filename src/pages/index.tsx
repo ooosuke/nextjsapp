@@ -1,16 +1,14 @@
 import Head from "next/head";
-import { Typography } from "src/components/elements/Typography";
-import { Layout } from "src/components/Layout";
+import { Layout } from "@/components/Layout";
+import Home from "@/components/Home";
 
-export default function Home() {
+export default function Main() {
     return (
         <Layout>
             <Head>
-                <title>ジョジョの奇妙な冒険</title>
+                <title>nextjsapp home.</title>
             </Head>
-            <Typography color="danger" variant="h1">
-                スタープラチナ
-            </Typography>
+            <Home />
         </Layout>
     );
 }

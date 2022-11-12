@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 type Props = {
     variant?: "h1" | "h2" | "h3" | "h4" | "h5" | "p" | "small" | "span";
-    color?:
+    type?:
         | "secondary"
         | "success"
         | "light"
@@ -11,24 +11,24 @@ type Props = {
         | "warning"
         | "info"
         | "default";
-    align?: "inherit" | "justify" | "left" | "right";
+    align?: "inherit" | "justify" | "left" | "right" | "center" | "justify-all";
     children: React.ReactNode;
 };
 
-const colors = (color: Props["color"]) => {
+const colors = (color: Props["type"]) => {
     switch (color) {
         case "primary":
-            return "#0D6EFD";
+            return "#1976d2";
         case "secondary":
             return "#6C757D";
         case "success":
-            return "#198754";
+            return "#2e7d32";
         case "danger":
-            return "#DC3545";
+            return "#d32f2f";
         case "warning":
-            return "#FFC107";
+            return "#ff9800";
         case "info":
-            return "#0EC9F0";
+            return "#0288d1";
         case "light":
             return "#F8F9FA";
         default:
@@ -37,19 +37,19 @@ const colors = (color: Props["color"]) => {
 };
 
 const Section = styled.section<Props>`
-    color: ${(props) => colors(props.color)};
+    color: ${(props) => colors(props.type)};
     text-align: ${(props) => props.align};
 `;
 
 export const Typography: React.FC<Props> = ({
     variant = "p",
-    color = "default",
+    type = "default",
     align = "inherit",
     children,
 }) => {
     const Element = Section.withComponent(variant);
     return (
-        <Element color={color} align={align}>
+        <Element color={type} align={align}>
             {children}
         </Element>
     );
