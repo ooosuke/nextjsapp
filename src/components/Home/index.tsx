@@ -1,5 +1,5 @@
 const Home: React.FC<{}> = ({}) => {
-    return <></>;
+  return <>fuga</>;
 };
 
 export default Home;

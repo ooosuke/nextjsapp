@@ -1,5 +1,5 @@
 {
-    "path-autocomplete.pathMappings": {
-        "@": "${folder}/src"
-    }
+  "path-autocomplete.pathMappings": {
+    "@": "${folder}/src"
+  }
 }
