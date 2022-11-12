@@ -6,6 +6,6 @@ type Props = {
 };
 
 export const Container = styled.div<Props>`
-  padding: 32px;
+  padding: 16px;
   margin: 0 auto;
 `;

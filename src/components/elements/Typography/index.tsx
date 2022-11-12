@@ -6,7 +6,7 @@ type Props = {
   type?: ColorType;
   align?: "inherit" | "justify" | "left" | "right" | "center" | "justify-all";
   children: React.ReactNode;
-};
+} & React.HtmlHTMLAttributes<HTMLElement>;
 
 const Section = styled.section<Props>`
   color: ${(props) => colors(props.type)};
@@ -18,10 +18,11 @@ export const Typography: React.FC<Props> = ({
   type = "default",
   align = "inherit",
   children,
+  ...rest
 }) => {
   const Element = Section.withComponent(variant);
   return (
-    <Element color={type} align={align}>
+    <Element color={type} align={align} {...rest}>
       {children}
     </Element>
   );

@@ -15,7 +15,7 @@ type Props = {
 };
 
 export const Stack = styled.div<Props>`
-  padding: 32px;
+  padding: 16px;
   display: flex;
   gap: ${(props) => (props.spacing || 1) * 8}px;
   flex-direction: ${(props) => props.direction || "column"};
