@@ -1,5 +1,6 @@
 {
   "path-autocomplete.pathMappings": {
     "@": "${folder}/src"
-  }
+  },
+  "typescript.preferences.importModuleSpecifier": "non-relative"
 }

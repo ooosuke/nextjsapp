@@ -1,14 +1,13 @@
 import Head from "next/head";
-import { Layout } from "@/components/Layout";
-import Home from "@/components/Home";
+import { Home as Component } from "@/components/Home";
 
-export default function Main() {
+export default function Home() {
   return (
-    <Layout>
+    <>
       <Head>
         <title>nextjsapp home.</title>
       </Head>
-      <Home />
-    </Layout>
+      <Component />
+    </>
   );
 }
