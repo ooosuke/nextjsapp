@@ -1,14 +1,14 @@
 import { Layout } from "@/components/Layout";
-import { IconProvider } from "@/providers/IconProvider";
+import { Providers } from "@/providers";
 import { AppProps } from "next/app";
 
 const App: React.FC<AppProps> = ({ Component, pageProps }) => (
   <>
-    <IconProvider>
+    <Providers>
       <Layout>
         <Component {...pageProps} />
       </Layout>
-    </IconProvider>
+    </Providers>
   </>
 );
 

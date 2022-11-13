@@ -3,6 +3,11 @@ import { useNotificationStore } from "src/stores/notifacations";
 
 const baseUrl = "https://jsonplaceholder.typicode.com";
 
+export type ErrorResponse = {
+  status: number;
+  message: string;
+};
+
 export const axios = Axios.create({
   baseURL: baseUrl,
 });
