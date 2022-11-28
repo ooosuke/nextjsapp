@@ -1,5 +1,6 @@
-import { Layout } from "@/components/Layout";
+import { Notification } from "@/elements/notification";
 import { Providers } from "@/providers";
+import { Box, Spinner } from "@chakra-ui/react";
 import { AppProps } from "next/app";
 import React from "react";
 import { FallbackProps, ErrorBoundary } from "react-error-boundary";
@@ -16,27 +17,27 @@ const ErrorFallback: React.FC<FallbackProps> = ({
   </div>
 );
 
-const SuspenseFallback: React.FC<{}> = () => (
-  <div>
-    <p>loading...</p>
-  </div>
-);
+const SuspenseFallback: React.FC<{}> = () => {
+  console.log("fallback");
+  return <div>loading......</div>;
+};
 
 const App: React.FC<AppProps> = ({ Component, pageProps }) => (
   <>
-    <React.Suspense fallback={SuspenseFallback}>
+    <React.StrictMode>
       <QueryErrorResetBoundary>
         {({ reset }) => (
           <ErrorBoundary FallbackComponent={ErrorFallback} onReset={reset}>
-            <Providers>
-              <Layout>
+            <React.Suspense fallback={<SuspenseFallback />}>
+              <Providers>
                 <Component {...pageProps} />
-              </Layout>
-            </Providers>
+                <Notification />
+              </Providers>
+            </React.Suspense>
           </ErrorBoundary>
         )}
       </QueryErrorResetBoundary>
-    </React.Suspense>
+    </React.StrictMode>
   </>
 );
 

@@ -1,13 +1,15 @@
 import Head from "next/head";
-import { Home as Component } from "@/components/Home";
+import { Home as Content } from "@/features/home/";
 
-export default function Home() {
+const Home = () => {
   return (
     <>
       <Head>
-        <title>nextjsapp home.</title>
+        <title>nextjsapp home</title>
       </Head>
-      <Component />
+      <Content />
     </>
   );
-}
+};
+
+export default Home;

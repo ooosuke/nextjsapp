@@ -1,7 +1,7 @@
 import Head from "next/head";
-import { Posts as Content } from "@/features/posts/";
+import { Post as Content } from "@/features/post/";
 
-const Posts = () => {
+const Post = () => {
   return (
     <>
       <Head>
@@ -12,4 +12,4 @@ const Posts = () => {
   );
 };
 
-export default Posts;
+export default Post;

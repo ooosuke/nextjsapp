@@ -8,6 +8,7 @@
     "lint": "eslint . --ext .js,.ts,.tsx"
   },
   "dependencies": {
+    "@chakra-ui/icons": "^2.0.12",
     "@chakra-ui/react": "^2.3.7",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
@@ -22,6 +23,7 @@
     "react-icons": "^4.6.0",
     "react-query": "^3.39.2",
     "recoil": "^0.7.6",
+    "suspense-overlay": "^1.0.1",
     "tailwindcss": "^3.2.3",
     "type-fest": "^3.2.0",
     "zustand": "^4.1.4"
